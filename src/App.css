@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+.container {
+  width: 60%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: rgba(222, 223, 223, 0.438);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  gap: 10px;
+}
+.todoContainer {
+  width: 96%;
+  min-height: 300px;
+  margin-top: 40px;
+margin: 0 auto;
+padding-bottom: 15px;
+}
+.headerText {
+  text-align: center;
+  font-size: 25px;
+  padding-top: 50px;
+ 
+}
+.inputBox {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.inputBox input{
+  width: 80%;
+  height: 100%;
+  border: 1px solid rgba(71, 210, 217, 0.363);
+  outline: none;
+  font-size: 16px;
+  padding: 0 15px;
+  border-radius: 5px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.btn-css{
+width: 15%;
+ height: 100%;
+ border: 1px solid rgba(231, 226, 226, 0.788);
+background-color: rgb(126, 195, 235);
+color: white;
+border-radius: 5px;
+cursor: pointer;
+}
+.completedSection{
+margin-top: 20px;
+height: 30px;
+}
+.btn-completed,.btn-uncompleted{
+ padding: 5px;
+ border: 1px solid rgba(231, 226, 226, 0.788);
+background-color: rgba(173, 42, 152, 0.753);
+color: white;
+border-radius: 5px;
+cursor: pointer;
+
+}
+.btn-uncompleted{
+  background-color: rgba(11, 137, 24, 0.459);
+}
+.chooseDiv select{
+  outline: unset;
+  border: 1px solid rgba(71, 210, 217, 0.363);
+padding: 5px;
+cursor: pointer;
+border-radius: 5px;
+}
+.searchtodo{
+  height: 100%;
+}
+.searchtodo input{
+  border: 1px solid rgba(71, 210, 217, 0.363);
+  outline: none;
+  height: 100%;
+  padding-left: 15px;
+  border-radius: 5px;
+  width: 70%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.line-through{
+  text-decoration: line-through;
+}
+
+.todomain-left {
+  display: inline-block;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%; 
 }

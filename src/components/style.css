@@ -1,0 +1,29 @@
+.todomain {
+  padding: 10px 0px;
+  background-color: rgba(0, 255, 255, 0.63);
+  padding-inline: 10px;
+  position: relative;
+  flex-direction: column;
+
+
+}
+.topbox{
+  /* position: absolute; */
+  padding: 10px;
+}
+.number {
+  margin-right: 5px;
+}
+.hide {
+  display: none;
+}
+.todomain-right button {
+  border: 1px solid rgba(0, 0, 0, 0.171);
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(126, 195, 235, 0.651);
+  border: unset;
+}
+.todomain-right button:hover {
+  transform: scale(1.4);
+}
