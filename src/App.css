@@ -2,7 +2,9 @@
   width: 60%;
   margin: 0 auto;
   box-sizing: border-box;
-  background-color: rgba(222, 223, 223, 0.438);
+  background-color: rgb(34 68 88 / 97%);
+  border-radius: 10px / 30px; /* horizontal radius / vertical radius */
+
 }
 .flex{
   display: flex;
@@ -89,10 +91,3 @@ border-radius: 5px;
   text-decoration: line-through;
 }
 
-.todomain-left {
-  display: inline-block;
-  white-space: nowrap; 
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 80%; 
-}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import { useDispatch, useSelector } from "react-redux";
 import {deleteTodo, completedfun } from "../store/todoSlice";
+import pinnednote from "../images/pinned-notes.png"
 function TODO({ data, id }) {
   const [completedCheck, setCompletedCheck] = useState(false);
 
@@ -35,9 +36,9 @@ function TODO({ data, id }) {
 
   return (
     <div className="todomain flex">
-      {/* <div className="topbox">
+      <div className="topbox">
         <div className="completedOrNot">
-
+          completed
         </div>
         <div className="todomain-right flex">
         <button onClick={() => deleteNote(data.id)}>🗑️</button>
@@ -48,21 +49,15 @@ function TODO({ data, id }) {
         )}
       </div>
       
-      </div> */}
+      </div>
       <div className="todomain-left">
-        <span className="number">{id + 1}.</span>
+
+          <img className="pinned-image" src={pinnednote} alt="" />
         <span className={`${todoCompleted ? "line-through" : ""}`}>
           {data.text}
         </span>
       </div>
-      <div className="todomain-right flex">
-        <button onClick={() => deleteNote(data.id)}>🗑️</button>
-        {todoCompleted ? (
-          <button onClick={() => completedTodo("removecompletd")}>❌</button>
-        ) : (
-          <button onClick={() => completedTodo("completed")}>✅</button>
-        )}
-      </div>
+     
     </div>
   );
 }

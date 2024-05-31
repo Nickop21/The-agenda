@@ -1,6 +1,6 @@
 .todomain {
   padding: 10px 0px;
-  background-color: rgba(0, 255, 255, 0.63);
+  gap: 0;
   padding-inline: 10px;
   position: relative;
   flex-direction: column;
@@ -8,22 +8,61 @@
 
 }
 .topbox{
-  /* position: absolute; */
-  padding: 10px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  background-color: #0000001a;
 }
-.number {
-  margin-right: 5px;
+.completedOrNot{
+  padding: 10px;
+  background-color:rgb(155 241 241 / 97%); 
+  /* border-top-left-radius: 15px; */
+  border-top-right-radius: 15px;
+padding-right: 50px;
+}
+.pinned-image{
+  margin:0 15px;
+  padding: 5px;
+  background-color:#000000cb;
+ 
+}
+.pinned-image {
+  width: 40px;
+  height: 40px;
+
+   
 }
 .hide {
   display: none;
 }
+.todomain-left{
+  width: 100%;
+  padding: 30px 0px;
+  background-color:rgb(155 241 241 / 97%);
+ /* border-top-right-radius: 15px; */
+ border-bottom-left-radius: 15px;
+ border-bottom-right-radius: 15px;
+ display: inline-block;
+ white-space: nowrap; 
+ overflow: hidden;
+ text-overflow: ellipsis;
+ 
+}
+.todomain-right{
+  margin-right: 20px;
+}
+
 .todomain-right button {
   border: 1px solid rgba(0, 0, 0, 0.171);
   border-radius: 5px;
   cursor: pointer;
   background-color: rgba(126, 195, 235, 0.651);
   border: unset;
+  height: 30px;
 }
 .todomain-right button:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
 }
