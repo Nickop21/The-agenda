@@ -1,9 +1,13 @@
 .todomain {
-  padding: 10px 0px;
+  width: 46%;
+  padding: 5px 0px;
   gap: 0;
   padding-inline: 10px;
   position: relative;
   flex-direction: column;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+
+  
 
 
 }
@@ -12,6 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+ border-top-right-radius: 15px;
 
   width: 100%;
   background-color: #0000001a;
@@ -19,9 +24,11 @@
 .completedOrNot{
   padding: 10px;
   background-color:rgb(155 241 241 / 97%); 
-  /* border-top-left-radius: 15px; */
+  border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-padding-right: 50px;
+/* padding-right: 150px; */
+font-weight: 800;
+width: 25%;
 }
 .pinned-image{
   margin:0 15px;
@@ -45,14 +52,16 @@ padding-right: 50px;
  /* border-top-right-radius: 15px; */
  border-bottom-left-radius: 15px;
  border-bottom-right-radius: 15px;
- display: inline-block;
+ /* display: inline-block;
  white-space: nowrap; 
  overflow: hidden;
- text-overflow: ellipsis;
+ text-overflow: ellipsis; */
+justify-content: unset;
  
 }
 .todomain-right{
   margin-right: 20px;
+
 }
 
 .todomain-right button {
@@ -66,3 +75,32 @@ padding-right: 50px;
 .todomain-right button:hover {
   transform: scale(1.2);
 }
+
+.greenbg{
+background-color:rgb(145 229 154 / 95%);
+}
+
+@media only screen and (max-width: 800px) {
+ .completedOrNot{
+  width: 30%;
+ }
+ .completedSection {
+  flex-direction: column-reverse;
+  margin-top: 50px;
+ }
+ .completedSection div{
+  width: 100%;
+ }
+ .inputBox input{
+width: 100%;
+ }
+ .todomain{
+  width: 100%;
+ }
+}
+@media only screen and (max-width: 1200px) {
+  
+  .todomain{
+   width: 100%;
+  }
+ }

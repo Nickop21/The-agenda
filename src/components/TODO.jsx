@@ -37,8 +37,8 @@ function TODO({ data, id }) {
   return (
     <div className="todomain flex">
       <div className="topbox">
-        <div className="completedOrNot">
-          completed
+        <div className={`completedOrNot ${todoCompleted ?"greenbg":""}`}>
+        {todoCompleted ? "Completed":"Going on"}
         </div>
         <div className="todomain-right flex">
         <button onClick={() => deleteNote(data.id)}>🗑️</button>
@@ -50,12 +50,12 @@ function TODO({ data, id }) {
       </div>
       
       </div>
-      <div className="todomain-left">
+      <div className={`todomain-left flex ${todoCompleted ?"greenbg":""}`}>
 
           <img className="pinned-image" src={pinnednote} alt="" />
-        <span className={`${todoCompleted ? "line-through" : ""}`}>
+        <p style={{paddingRight:"20px"}}>
           {data.text}
-        </span>
+        </p>
       </div>
      
     </div>

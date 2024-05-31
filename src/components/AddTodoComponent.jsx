@@ -6,6 +6,7 @@ import {
   search,
   currentselect,
 } from "../store/todoSlice";
+import Progressbar from "./progressBar/Progressbar";
 
 function AddTodoComponent() {
   const [todoData, setTodoData] = useState("");
@@ -39,7 +40,8 @@ function AddTodoComponent() {
 
   return (
     <div>
-      <h1 className="headerText">Personal TODO App</h1>
+
+
       <div className="inputBox">
         <input
           type="text"

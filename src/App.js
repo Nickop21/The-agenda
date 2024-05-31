@@ -4,6 +4,7 @@ import TODO from "./components/TODO";
 import { useDispatch, useSelector } from "react-redux";
 import { addTodo } from "./store/todoSlice";
 import AddTodoComponent from "./components/AddTodoComponent";
+import Progressbar from "./components/progressBar/Progressbar";
 
 function App() {
   const { todos, searchtext,currentselected} = useSelector((state) => state.todo);
@@ -34,20 +35,30 @@ function App() {
     setSearchData(filteredTodos);
   }, [currentselected, todos]);
 
-  return (
+  return (<>
+    <h1 className="headerText">Agenda for today</h1>
+    <div style={{width:"100%",}}>
+    <Progressbar/>
+
+    </div>
     <div className="container">
+      
       <div className="todoContainer">
         <AddTodoComponent />
         {/* all notes section */}
 
-        <h6>All Your Notes Here...</h6>
+        <h6 style={{color:"white"}}>All Your Notes Here...</h6>
+        <div className="todo-main-conatiner flex"> 
 
         {searchdata?.map(
           (datatodo, index) =>
             datatodo.text != "" && <TODO data={datatodo} id={index} />
         )}
+        </div>
+
       </div>
     </div>
+    </>
   );
 }
 
