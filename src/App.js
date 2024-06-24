@@ -31,7 +31,7 @@ function App() {
         return true; // Include all todos
       }
     });
-  
+  // to show kind of data
     setSearchData(filteredTodos);
   }, [currentselected, todos]);
 
@@ -52,7 +52,7 @@ function App() {
 
         {searchdata?.map(
           (datatodo, index) =>
-            datatodo.text != "" && <TODO data={datatodo} id={index} />
+            datatodo.text != "" && <TODO data={datatodo} id={index} key={index}/>
         )}
         </div>
 

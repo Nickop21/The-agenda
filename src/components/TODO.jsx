@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 import { useDispatch, useSelector } from "react-redux";
-import {deleteTodo, completedfun } from "../store/todoSlice";
+import {deleteTodo, completedfun, allcompletedfunction } from "../store/todoSlice";
 import pinnednote from "../images/pinned-notes.png"
 function TODO({ data, id }) {
   const [completedCheck, setCompletedCheck] = useState(false);
@@ -15,21 +15,21 @@ function TODO({ data, id }) {
       setTodoCompleted(data.completed);
 
 
-  }, [data]);
-
-
+  }, [data]); 
   function deleteNote(currentid) {
     dispatch(deleteTodo(currentid));
   }
 
   function completedTodo(param) {
     if (param == "completed") {
-      // setTodoCompleted(true);
-      dispatch(completedfun({ id: data.id, todoCompleted: true }));
-    } else {
-      // setTodoCompleted(false);
-      dispatch(completedfun({ id: data.id, todoCompleted: false }));
 
+      dispatch(completedfun({ id: data.id, todoCompleted: true }));
+     
+    } else {
+
+      dispatch(completedfun({ id: data.id, todoCompleted: false }));
+      dispatch(allcompletedfunction(false))
+     
     }
 
   }
